@@ -1,0 +1,8 @@
+.radio-group-list {
+    padding: 20px 0 20px;
+    margin: 0;
+    list-style: none;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
