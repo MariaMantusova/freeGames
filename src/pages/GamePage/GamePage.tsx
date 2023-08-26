@@ -1,8 +1,8 @@
 import React from "react";
-import LayoutPage from "../LayoutPage/LayoutPage";
-import GameInfoBlock from "../GameInfoBlock/GameInfoBlock";
-import GameCarousel from "../GameCarousel/GameCarousel";
-import GameRequirements from "../GameRequirements/GameRequirements";
+import LayoutPage from "../../components/LayoutPage/LayoutPage";
+import GameInfoBlock from "../../components/GameInfoBlock/GameInfoBlock";
+import GameCarousel from "../../components/GameCarousel/GameCarousel";
+import GameRequirements from "../../components/GameRequirements/GameRequirements";
 import {IGameForGamePage} from "../../types/typesMain";
 
 const game: IGameForGamePage =

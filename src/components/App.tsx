@@ -1,13 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import MainPage from './MainPage/MainPage';
-import GamePage from './GamePage/GamePage';
+import GamePage from '../pages/GamePage/GamePage';
+import MainPage from '../pages/MainPage/MainPage';
 
 function App() {
     return (
         <Routes>
             <Route path="/" element={<MainPage/>}/>
-            <Route path="/game" element={<GamePage/>}/>
+            <Route path="/game/:id" element={<GamePage/>}/>
         </Routes>
     )
 }
