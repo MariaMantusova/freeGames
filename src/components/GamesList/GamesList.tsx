@@ -1,6 +1,6 @@
 import React from "react";
 import GameItem from "../GameItem/GameItem";
-import {List, Pagination} from "antd";
+import {List} from "antd";
 
 interface IGame {
     "id": number,

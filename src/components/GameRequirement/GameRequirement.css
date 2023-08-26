@@ -1,0 +1,18 @@
+.requirement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.requirement__name {
+    margin-bottom: 0;
+    font-size: 15px;
+
+}
+
+.requirement__description {
+    margin: 0;
+    font-size: 16px;
+}

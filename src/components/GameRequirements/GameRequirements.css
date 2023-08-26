@@ -1,0 +1,13 @@
+.requirements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+    padding: 0 10px 10px;
+    justify-content: center;
+    margin: 0 0 50px;
+}
+
+.requirements__title {
+    font-size: 25px;
+ }
