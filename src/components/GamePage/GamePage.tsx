@@ -1,36 +1,11 @@
 import React from "react";
 import LayoutPage from "../LayoutPage/LayoutPage";
-import { Typography } from 'antd';
 import GameInfoBlock from "../GameInfoBlock/GameInfoBlock";
 import GameCarousel from "../GameCarousel/GameCarousel";
 import GameRequirements from "../GameRequirements/GameRequirements";
+import {IGameForGamePage} from "../../types/typesMain";
 
-interface IGame {
-    "id": number,
-    "title": string,
-    "thumbnail": string,
-    "short_description": string,
-    "game_url": string,
-    "genre": string,
-    "platform": string,
-    "publisher": string,
-    "developer": string,
-    "release_date": string,
-    "freetogame_profile_url": string
-    "screenshots": {
-        "id": number,
-        "image": string
-    }[],
-    "minimum_system_requirements"?: {
-        "os": string,
-        "processor":  string,
-        "memory":  string,
-        "graphics":  string,
-        "storage":  string,
-    },
-}
-
-const game: IGame =
+const game: IGameForGamePage =
     {
         "id": 118,
         "title": "Starbreak",
@@ -75,8 +50,7 @@ function GamePage() {
     return(
         <LayoutPage>
             <GameInfoBlock developer={game.developer} publisher={game.publisher} category={game.genre}
-                           image={game.thumbnail} date={game.release_date} title={game.title} photos={game.screenshots}
-                           requirements={game.minimum_system_requirements}
+                           image={game.thumbnail} date={game.release_date} title={game.title}
             />
             <GameCarousel photos={game.screenshots}/>
             <GameRequirements requirements={game.minimum_system_requirements}/>

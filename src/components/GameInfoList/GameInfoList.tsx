@@ -1,12 +1,6 @@
 import React from "react";
 import {List} from "antd";
-
-interface IPropsGameInfo {
-    category: string
-    date: string
-    publisher: string
-    developer: string
-}
+import {IPropsGameInfo} from "../../types/typesForProps";
 
 function GameInfoList(props: IPropsGameInfo) {
     const data: string[] = [

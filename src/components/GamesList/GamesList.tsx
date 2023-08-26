@@ -1,22 +1,9 @@
 import React from "react";
 import GameItem from "../GameItem/GameItem";
 import {List} from "antd";
+import {IGameForMainPage} from "../../types/typesMain";
 
-interface IGame {
-    "id": number,
-    "title": string,
-    "thumbnail": string,
-    "short_description": string,
-    "game_url": string,
-    "genre": string,
-    "platform": string,
-    "publisher": string,
-    "developer": string,
-    "release_date": string,
-    "freetogame_profile_url": string
-}
-
-const testArray: IGame[] = [
+const testArray: IGameForMainPage[] = [
     {
         "id": 118,
         "title": "Starbreak",

@@ -15,7 +15,7 @@ function SelectForCategory() {
         <Select
         showSearch
         mode="multiple"
-        placeholder="Выберите жанр"
+        placeholder="Выберите жанры"
         optionFilterProp="russianName"
         onChange={onChange}
         onSearch={onSearch}

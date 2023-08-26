@@ -1,10 +1,7 @@
 import React from "react";
-import { Radio } from 'antd';
-import {IInfoArray} from "../../data/dataForRadio";
-
-interface IPropsRadioGroup {
-    categoriesArray: IInfoArray[]
-}
+import {Radio} from 'antd';
+import {IPropsRadioGroup} from "../../types/typesForProps";
+import {IInfoArray} from "../../types/typesMain";
 
 function RadioGroup(props: IPropsRadioGroup) {
     return(

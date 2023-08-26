@@ -14,12 +14,12 @@ function RadioGroupList() {
                 </RadioBlock>
             </li>
             <li className="radio-group-list__item">
-                <RadioBlock title="Сортировать&#160;по типу&#160;платформы:">
+                <RadioBlock title="Фильтровать&#160;по&#160;:">
                     <RadioGroup categoriesArray={platformArray}/>
                 </RadioBlock>
             </li>
             <li className="radio-group-list__item">
-                <RadioBlock title="Выбрать&#160;жанр:">
+                <RadioBlock title="Выбрать&#160;жанры:">
                     <SelectForCategory/>
                 </RadioBlock>
             </li>

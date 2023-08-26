@@ -2,33 +2,11 @@ import React from "react";
 import "./GameInfoBlock.css";
 import {Image, Typography} from 'antd';
 import GameInfoList from "../GameInfoList/GameInfoList";
-import GameCarousel from "../GameCarousel/GameCarousel";
-import GameRequirements from "../GameRequirements/GameRequirements";
-import LayoutPage from "../LayoutPage/LayoutPage";
+import {IPropsGameInfoBlock} from "../../types/typesForProps";
 
 const { Title } = Typography;
 
-interface IPropsGameInfo {
-    category: string
-    date: string
-    publisher: string
-    developer: string
-    image: string
-    title: string
-    photos: {
-        "id": number,
-        "image": string
-    }[]
-    "requirements"?: {
-        "os": string,
-        "processor":  string,
-        "memory":  string,
-        "graphics":  string,
-        "storage":  string,
-    },
-}
-
-function GameInfoBlock(props: IPropsGameInfo) {
+function GameInfoBlock(props: IPropsGameInfoBlock) {
     return(
         <div className="game-info-block">
             <Image width={600} src={props.image} alt={props.title}/>

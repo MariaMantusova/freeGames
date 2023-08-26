@@ -1,12 +1,6 @@
 import React from "react";
-import { Carousel } from 'antd';
-
-interface IPropsCarousel {
-    photos: {
-        "id": number,
-        "image": string
-    }[]
-}
+import {Carousel} from 'antd';
+import {IPropsCarousel} from "../../types/typesForProps";
 
 function GameCarousel(props: IPropsCarousel) {
     return(

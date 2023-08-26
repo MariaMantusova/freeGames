@@ -1,7 +1,4 @@
-interface IInfoArray {
-    value: string
-    label: string
-}
+import {IInfoArray} from "../types/typesMain";
 
 const platformArray: IInfoArray[] = [
     {
@@ -222,4 +219,3 @@ const categoryOrTag: IInfoArray[] = [
 ]
 
 export {sortTypeArray, categoryOrTag, platformArray}
-export type {IInfoArray}

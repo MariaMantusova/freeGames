@@ -1,10 +1,6 @@
 import React from "react";
 import "./GameRequirement.css";
-
-interface IPropsReq {
-    name: string
-    description: string | undefined
-}
+import {IPropsReq} from "../../types/typesForProps";
 
 function GameRequirement(props: IPropsReq) {
     return(

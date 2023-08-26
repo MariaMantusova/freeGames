@@ -1,18 +1,10 @@
 import React from "react";
-import { Card } from 'antd';
+import {Card} from 'antd';
+import {IGameProps} from "../../types/typesForProps";
 
 const { Meta } = Card;
 
-interface ICameItemProps {
-    image: string
-    title: string
-    category: string
-    date: string
-    publisher: string
-}
-
-
-function GameItem(props: ICameItemProps) {
+function GameItem(props: IGameProps) {
     return(
         <Card
             hoverable
