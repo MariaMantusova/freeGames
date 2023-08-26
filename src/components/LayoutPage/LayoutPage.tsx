@@ -10,7 +10,8 @@ function LayoutPage(props: IPropsLayout) {
             <Header style={{display: "flex", justifyContent: "space-between", backgroundColor: "#272b30"}}>
                 <HeaderLogo/>
             </Header>
-            <Content style={{display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: "#272b30"}}>
+            <Content style={{display: "flex", flexDirection: "column", alignItems: "center",
+                backgroundColor: "#272b30"}}>
                 {props.children}
             </Content>
             <Footer style={{display: "flex", justifyContent: "center", backgroundColor: "#000", color: "#aaa"}}>

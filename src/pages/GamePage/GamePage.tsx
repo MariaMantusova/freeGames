@@ -4,6 +4,8 @@ import GameInfoBlock from "../../components/GameInfoBlock/GameInfoBlock";
 import GameCarousel from "../../components/GameCarousel/GameCarousel";
 import GameRequirements from "../../components/GameRequirements/GameRequirements";
 import {IGameForGamePage} from "../../types/typesMain";
+import {Link} from "react-router-dom";
+import ButtonBack from "../../components/ButtonBack/ButtonBack";
 
 const game: IGameForGamePage =
     {
@@ -49,6 +51,7 @@ const game: IGameForGamePage =
 function GamePage() {
     return(
         <LayoutPage>
+            <ButtonBack/>
             <GameInfoBlock developer={game.developer} publisher={game.publisher} category={game.genre}
                            image={game.thumbnail} date={game.release_date} title={game.title}
             />
