@@ -1,13 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import GamesList from "../../components/GamesList/GamesList";
 import LayoutPage from "../../components/LayoutPage/LayoutPage";
 import RadioGroupList from "../../components/RadioGroupsList/RadioGroupsList";
+import Preloader from "../../components/Preloader/Preloader";
 
 function MainPage() {
+    const [isLoading, setIsLoading] = useState(false);
+
     return(
         <LayoutPage>
             <RadioGroupList/>
-            <GamesList/>
+            {isLoading ? <Preloader/> : <GamesList/>}
         </LayoutPage>
     )
 }

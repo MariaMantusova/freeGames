@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import LayoutPage from "../../components/LayoutPage/LayoutPage";
 import GameInfoBlock from "../../components/GameInfoBlock/GameInfoBlock";
 import GameCarousel from "../../components/GameCarousel/GameCarousel";
 import GameRequirements from "../../components/GameRequirements/GameRequirements";
 import {IGameForGamePage} from "../../types/typesMain";
 import ButtonBack from "../../components/ButtonBack/ButtonBack";
+import Preloader from "../../components/Preloader/Preloader";
 
 const game: IGameForGamePage =
     {
@@ -48,14 +49,20 @@ const game: IGameForGamePage =
 
 
 function GamePage() {
+    const [isLoading, setIsLoading] = useState(false);
+
     return(
         <LayoutPage>
-            <ButtonBack/>
-            <GameInfoBlock developer={game.developer} publisher={game.publisher} category={game.genre}
-                           image={game.thumbnail} date={game.release_date} title={game.title}
-            />
-            <GameCarousel photos={game.screenshots}/>
-            <GameRequirements requirements={game.minimum_system_requirements}/>
+            {isLoading ? <Preloader/> :
+                <>
+                    <ButtonBack/>
+                    <GameInfoBlock developer={game.developer} publisher={game.publisher} category={game.genre}
+                                   image={game.thumbnail} date={game.release_date} title={game.title}
+                    />
+                    <GameCarousel photos={game.screenshots}/>
+                    <GameRequirements requirements={game.minimum_system_requirements}/>
+                </>
+            }
         </LayoutPage>
     )
 }
