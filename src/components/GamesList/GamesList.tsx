@@ -101,12 +101,12 @@ function GamesList() {
     return (
         <>
             <List
-                style={{maxWidth: "71vw", margin: "0 auto"}}
+                style={{maxWidth: "71vw", margin: "20px auto 40px"}}
                 pagination={{
                     onChange: (page) => {
                         console.log(page);
                     },
-                    pageSize: 3 || 2,
+                    pageSize: 9,
                     align: "center",
                 }}
                 grid={{

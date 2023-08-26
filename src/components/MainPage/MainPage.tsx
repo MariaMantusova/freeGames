@@ -16,7 +16,7 @@ function MainPage() {
                 <ContentBlock/>
                 <GamesList/>
             </Content>
-            <Footer style={{display: "flex", justifyContent: "center", backgroundColor: "#272b30", color: "#aaa"}}>
+            <Footer style={{display: "flex", justifyContent: "center", backgroundColor: "#000", color: "#aaa"}}>
                 &#169; Тестовое задание выполнено Марией Мантусовой.
             </Footer>
         </Layout>
