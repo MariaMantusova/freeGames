@@ -8,11 +8,16 @@ function GameRequirements(props: IPropsRequirements) {
         <>
             <h2 className="requirements__title">Минимальные системные требования</h2>
             <ul className="requirements">
-                <GameRequirement description={props.requirements?.os} name="Операционная система"/>
-                <GameRequirement description={props.requirements?.processor} name="Процессор"/>
-                <GameRequirement description={props.requirements?.memory} name="Оперативная память"/>
-                <GameRequirement description={props.requirements?.storage} name="Места на диске"/>
-                <GameRequirement description={props.requirements?.graphics} name="Видеокарта"/>
+                <GameRequirement description={props.requirements?.os || "Информации не найдено"}
+                                 name="Операционная система"/>
+                <GameRequirement description={props.requirements?.processor || "Информации не найдено"}
+                                 name="Процессор"/>
+                <GameRequirement description={props.requirements?.memory || "Информации не найдено"}
+                                 name="Оперативная память"/>
+                <GameRequirement description={props.requirements?.storage || "Информации не найдено"}
+                                 name="Места на диске"/>
+                <GameRequirement description={props.requirements?.graphics || "Информации не найдено"}
+                                 name="Видеокарта"/>
             </ul>
         </>
     )
