@@ -13,7 +13,7 @@ export interface IPropsLayout {
     children: JSX.Element | JSX.Element[];
 }
 
-export interface IPropsRadioBlock {
+export interface IPropsSelectBlock {
     children: JSX.Element
     title: string
 }

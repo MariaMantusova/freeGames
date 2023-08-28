@@ -1,8 +1,8 @@
 import React from "react";
-import "./RadioBlock.css";
-import {IPropsRadioBlock} from "../../interfaces/interfacesForProps";
+import "./SelectBlock.css";
+import {IPropsSelectBlock} from "../../interfaces/interfacesForProps";
 
-function RadioBlock(props: IPropsRadioBlock) {
+function SelectBlock(props: IPropsSelectBlock) {
    return (
        <div className="radio__block">
            <h2 className="radio__title">{props.title}</h2>
@@ -12,4 +12,4 @@ function RadioBlock(props: IPropsRadioBlock) {
    )
 }
 
-export default RadioBlock;
+export default SelectBlock;

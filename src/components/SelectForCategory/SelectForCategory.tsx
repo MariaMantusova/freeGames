@@ -1,6 +1,6 @@
 import React from "react";
 import { Select } from 'antd';
-import {categoryOrTag} from "../../data/dataForRadio";
+import {categoryOrTag} from "../../data/dataForSelect";
 
 const onChange = (value: string) => {
     console.log(`selected ${value}`);
