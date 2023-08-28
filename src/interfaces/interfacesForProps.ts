@@ -1,8 +1,11 @@
-import {TGamesResponse, TInfoArray} from "../types/typesMain";
+import React from "react";
+import {TFetchGamesParams, TGamesResponse, TInfoArray} from "../types/typesMain";
 
 export interface IPropsSelect {
     categoriesArray: TInfoArray[]
-    defaultValue: string
+    placeholder: string
+    setParams: React.Dispatch<React.SetStateAction<TFetchGamesParams>>
+    paramKey: string
 }
 
 export interface IPropsGameList {
@@ -28,6 +31,11 @@ export interface IPropsCarousel {
         "id": number,
         "image": string
     }[]
+}
+
+export interface IPropsSelectList {
+
+    setParams: React.Dispatch<React.SetStateAction<TFetchGamesParams>>
 }
 
 export interface IPropsGameInfo {

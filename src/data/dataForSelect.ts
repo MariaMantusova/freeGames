@@ -35,10 +35,10 @@ const sortTypeArray: TInfoArray[] = [
 ];
 
 
-const categoryOrTag: TInfoArray[] = [
+const category: TInfoArray[] = [
     {
         value: "mmorpg",
-        label: "MMORG"
+        label: "MMORPG"
     },
     {
         value: "shooter",
@@ -218,4 +218,4 @@ const categoryOrTag: TInfoArray[] = [
     },
 ]
 
-export {sortTypeArray, categoryOrTag, platformArray}
+export {sortTypeArray, category, platformArray}

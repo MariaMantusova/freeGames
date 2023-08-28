@@ -23,8 +23,8 @@ export type TNoResults = {
 
 export type TFetchGamesParams = {
     platform?: string;
-    category?: string;
     'sort-by'?: string;
+    category?: string;
 };
 
 export type TMinRequirements = {

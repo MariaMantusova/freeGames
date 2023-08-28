@@ -7,7 +7,7 @@ function GamesList(props: IPropsGameList) {
     return (
         <>
             <List
-                style={{maxWidth: "71vw", margin: "20px auto 40px"}}
+                style={{maxWidth: "71vw", width: "100%", margin: "20px auto 40px"}}
                 pagination={{
                     pageSize: 15,
                     align: "end",
@@ -25,8 +25,7 @@ function GamesList(props: IPropsGameList) {
                 dataSource={props.products}
                 renderItem={(item) => (
                     <List.Item
-                        style={{maxWidth: "300px", marginTop: "20px"}}
-                    >
+                        style={{maxWidth: "300px", marginTop: "20px"}}>
                         <GameItem title={item.title} image={item.thumbnail} publisher={item.publisher}
                                   category={item.genre} id={item.id}
                                   date={item.release_date}
