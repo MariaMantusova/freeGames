@@ -1,4 +1,4 @@
-import {IInfoArray} from "./typesMain";
+import {GamesResponse, IInfoArray} from "./typesMain";
 
 export interface IPropsRadioGroup {
     categoriesArray: IInfoArray[]
@@ -41,6 +41,10 @@ export interface IPropsGameInfo {
     date: string
     publisher: string
     developer: string
+}
+
+export interface IPropsGameList {
+    products: GamesResponse
 }
 
 export interface IPropsGameInfoBlock {
