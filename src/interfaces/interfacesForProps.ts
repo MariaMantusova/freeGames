@@ -1,7 +1,15 @@
-import {GamesResponse, IInfoArray} from "./typesMain";
+import {TGamesResponse, TInfoArray} from "../types/typesMain";
 
 export interface IPropsRadioGroup {
-    categoriesArray: IInfoArray[]
+    categoriesArray: TInfoArray[]
+}
+
+export interface IPropsGameList {
+    products: TGamesResponse
+}
+
+export interface IPropsLayout {
+    children: JSX.Element | JSX.Element[];
 }
 
 export interface IPropsRadioBlock {
@@ -9,8 +17,23 @@ export interface IPropsRadioBlock {
     title: string
 }
 
-export interface IPropsLayout {
-    children: JSX.Element | JSX.Element[];
+export interface IPropsReq {
+    name: string
+    description: string | undefined
+}
+
+export interface IPropsCarousel {
+    photos: {
+        "id": number,
+        "image": string
+    }[]
+}
+
+export interface IPropsGameInfo {
+    category: string
+    date: string
+    publisher: string
+    developer: string
 }
 
 export interface IPropsRequirements {
@@ -23,28 +46,13 @@ export interface IPropsRequirements {
     },
 }
 
-export interface IPropsReq {
-    name: string
-    description: string | undefined
-}
-
 export interface IGameProps {
     image: string
     title: string
     category: string
     date: string
     publisher: string
-}
-
-export interface IPropsGameInfo {
-    category: string
-    date: string
-    publisher: string
-    developer: string
-}
-
-export interface IPropsGameList {
-    products: GamesResponse
+    id: number
 }
 
 export interface IPropsGameInfoBlock {
@@ -54,11 +62,4 @@ export interface IPropsGameInfoBlock {
     developer: string
     image: string
     title: string
-}
-
-export interface IPropsCarousel {
-    photos: {
-        "id": number,
-        "image": string
-    }[]
 }

@@ -1,6 +1,6 @@
-import {IInfoArray} from "../types/typesMain";
+import {TInfoArray} from "../types/typesMain";
 
-const platformArray: IInfoArray[] = [
+const platformArray: TInfoArray[] = [
     {
         value: "pc",
         label: "Компьютерные игры"
@@ -15,7 +15,7 @@ const platformArray: IInfoArray[] = [
     },
 ];
 
-const sortTypeArray: IInfoArray[] = [
+const sortTypeArray: TInfoArray[] = [
     {
         value: "release-date",
         label: "По дате релиза"
@@ -35,7 +35,7 @@ const sortTypeArray: IInfoArray[] = [
 ];
 
 
-const categoryOrTag: IInfoArray[] = [
+const categoryOrTag: TInfoArray[] = [
     {
         value: "mmorpg",
         label: "MMORG"

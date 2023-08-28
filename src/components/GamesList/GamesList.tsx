@@ -1,7 +1,7 @@
 import React from "react";
 import GameItem from "../GameItem/GameItem";
 import {List} from "antd";
-import {IPropsGameList} from "../../types/typesForProps";
+import {IPropsGameList} from "../../interfaces/interfacesForProps";
 
 function GamesList(props: IPropsGameList) {
     return (
@@ -9,11 +9,9 @@ function GamesList(props: IPropsGameList) {
             <List
                 style={{maxWidth: "71vw", margin: "20px auto 40px"}}
                 pagination={{
-                    onChange: (page) => {
-                        console.log(page);
-                    },
-                    pageSize: 9,
-                    align: "center",
+                    pageSize: 15,
+                    align: "end",
+                    showSizeChanger: false
                 }}
                 grid={{
                     gutter: 60,
@@ -30,7 +28,7 @@ function GamesList(props: IPropsGameList) {
                         style={{maxWidth: "300px", marginTop: "20px"}}
                     >
                         <GameItem title={item.title} image={item.thumbnail} publisher={item.publisher}
-                                  category={item.genre}
+                                  category={item.genre} id={item.id}
                                   date={item.release_date}
                         />
                     </List.Item>

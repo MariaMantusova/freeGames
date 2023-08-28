@@ -1,7 +1,7 @@
 import React from "react";
 import GameRequirement from "../GameRequirement/GameRequirement";
 import "./GameRequirements.css";
-import {IPropsRequirements} from "../../types/typesForProps";
+import {IPropsRequirements} from "../../interfaces/interfacesForProps";
 
 function GameRequirements(props: IPropsRequirements) {
     return (

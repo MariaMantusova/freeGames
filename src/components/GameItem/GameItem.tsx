@@ -1,12 +1,19 @@
 import React from "react";
 import {Card} from 'antd';
-import {IGameProps} from "../../types/typesForProps";
+import {IGameProps} from "../../interfaces/interfacesForProps";
+import { useNavigate } from "react-router-dom";
 
 const { Meta } = Card;
 
 function GameItem(props: IGameProps) {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/game/${props.id}`);
+    };
+
     return(
-        <Card
+        <Card onClick={handleClick}
             hoverable
             style={{ width: 300, display: "flex", flexDirection: "column", margin: 0}}
             cover={<img alt={props.title} src={props.image} />}

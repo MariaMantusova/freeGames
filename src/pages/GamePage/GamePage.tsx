@@ -1,27 +1,33 @@
-import React, {useState} from "react";
+import React from "react";
 import LayoutPage from "../../components/LayoutPage/LayoutPage";
 import GameInfoBlock from "../../components/GameInfoBlock/GameInfoBlock";
 import ButtonBack from "../../components/ButtonBack/ButtonBack";
 import Preloader from "../../components/Preloader/Preloader";
-import { IGameForGamePage } from "../../types/typesMain";
 import GameCarousel from "../../components/GameCarousel/GameCarousel";
 import GameRequirements from "../../components/GameRequirements/GameRequirements";
+import {gameAPI} from "../../store/games/games.api";
+import { useParams } from "react-router-dom";
 
 function GamePage() {
-    const [isLoading, setIsLoading] = useState(false);
-    const [data, setData] = useState<IGameForGamePage>()
+    const gameID = useParams().id || '0';
+
+    const {
+        data: details,
+        error,
+        isLoading,
+    } = gameAPI.useFetchGameDetailsQuery({ id: gameID! })
 
     return (
         <LayoutPage>
             {isLoading ? <Preloader/> :
                 <>
                 <ButtonBack/>
-                {data &&
+                {details &&
                 <>
-                    <GameInfoBlock developer={data.title} publisher={data.title} category={data.title}
-                                   image={data.title} date={data.title} title={data.title}/>
-                    <GameCarousel photos={data.screenshots}/>
-                    <GameRequirements requirements={data.minimum_system_requirements}/>
+                    <GameInfoBlock developer={details.developer} publisher={details.publisher} category={details.genre}
+                                   image={details.thumbnail} date={details.release_date.split("-").reverse().join(".")} title={details.title}/>
+                    <GameCarousel photos={details.screenshots}/>
+                    <GameRequirements requirements={details.minimum_system_requirements}/>
                 </>}
                 </>
             }

@@ -1,6 +1,6 @@
 import React from "react";
 import {Carousel} from 'antd';
-import {IPropsCarousel} from "../../types/typesForProps";
+import {IPropsCarousel} from "../../interfaces/interfacesForProps";
 
 function GameCarousel(props: IPropsCarousel) {
     return(

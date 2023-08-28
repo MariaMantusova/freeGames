@@ -1,6 +1,6 @@
 import React from "react";
 import "./RadioBlock.css";
-import {IPropsRadioBlock} from "../../types/typesForProps";
+import {IPropsRadioBlock} from "../../interfaces/interfacesForProps";
 
 function RadioBlock(props: IPropsRadioBlock) {
    return (

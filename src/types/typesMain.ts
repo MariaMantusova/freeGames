@@ -1,53 +1,36 @@
-interface IInfoArray {
+import {IGame} from "../interfaces/interfacesMain";
+
+export type TGamesResponse = IGame[];
+
+export type TFetchGameParams = {
+    id: string;
+};
+
+export type TInfoArray = {
     value: string
     label: string
 }
 
-export type {IInfoArray};
-
-export type GamesResponse = IGameForMainPage[];
-
-export interface IGameForMainPage {
+export type TScreenshot = {
     "id": number;
-    "title": string;
-    "thumbnail": string;
-    "short_description": string;
-    "game_url": string;
-    "genre": string;
-    "platform": string;
-    "publisher": string;
-    "developer": string;
-    "release_date": string;
-    "freetogame_profile_url": string;
+    "image": string;
 }
 
-export interface IGameForGamePage {
-    "id": number;
-    "title": string;
-    "thumbnail": string;
-    "status": string;
-    "short_description": string;
-    "description": string;
-    "game_url": string;
-    "genre": string;
-    "platform": string;
-    "publisher": string;
-    "developer": string;
-    "release_date": string;
-    "freetogame_profile_url": string;
-    "minimum_system_requirements"?: IMinRequirements;
-    "screenshots": IScreenshot[];
-}
+export type TNoResults = {
+    status: number;
+    status_message: string;
+};
 
-interface IMinRequirements {
+export type TFetchGamesParams = {
+    platform?: string;
+    category?: string;
+    'sort-by'?: string;
+};
+
+export type TMinRequirements = {
     "os": string;
     "processor": string;
     "memory": string;
     "graphics": string;
     "storage": string;
-}
-
-interface IScreenshot {
-    "id": number;
-    "image": string;
 }

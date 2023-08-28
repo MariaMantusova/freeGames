@@ -2,7 +2,7 @@ import React from "react";
 import {Content, Footer, Header} from "antd/es/layout/layout";
 import HeaderLogo from "../HeaderLogo/HeaderLogo";
 import {Layout} from "antd";
-import {IPropsLayout} from "../../types/typesForProps";
+import {IPropsLayout} from "../../interfaces/interfacesForProps";
 
 function LayoutPage(props: IPropsLayout) {
     return(
