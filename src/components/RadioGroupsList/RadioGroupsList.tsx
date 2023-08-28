@@ -1,7 +1,7 @@
 import React from "react";
 import "./RadioGroupList.css";
 import RadioBlock from "../RadioBlock/RadioBlock";
-import RadioGroup from "../RadioGroup/RadioGroup";
+import SimpleSelect from "../SimpleSelector/SimpleSelect";
 import {platformArray, sortTypeArray} from "../../data/dataForRadio";
 import SelectForCategory from "../SelectForCategory/SelectForCategory";
 
@@ -10,12 +10,12 @@ function RadioGroupList() {
         <ul className="radio-group-list">
             <li className="radio-group-list__item">
                 <RadioBlock title="Сортировать&#160;по:">
-                    <RadioGroup categoriesArray={sortTypeArray}/>
+                    <SimpleSelect categoriesArray={sortTypeArray} defaultValue="relevance"/>
                 </RadioBlock>
             </li>
             <li className="radio-group-list__item">
-                <RadioBlock title="Фильтровать&#160;по&#160;:">
-                    <RadioGroup categoriesArray={platformArray}/>
+                <RadioBlock title="Фильтровать&#160;по:">
+                    <SimpleSelect categoriesArray={platformArray} defaultValue="all"/>
                 </RadioBlock>
             </li>
             <li className="radio-group-list__item">

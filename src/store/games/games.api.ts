@@ -19,6 +19,7 @@ export const gameAPI = createApi({
                         'free-to-play-games-database.p.rapidapi.com',
                 },
             }),
+            keepUnusedDataFor: 0,
         }),
         fetchGameDetails: build.query<IGameDetails, TFetchGameParams>({
             query: (params: TFetchGameParams) => ({
@@ -30,6 +31,7 @@ export const gameAPI = createApi({
                         'free-to-play-games-database.p.rapidapi.com',
                 },
             }),
+            keepUnusedDataFor: 60 * 5,
         }),
     }),
 });

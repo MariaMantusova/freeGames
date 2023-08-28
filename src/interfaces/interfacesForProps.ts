@@ -1,7 +1,8 @@
 import {TGamesResponse, TInfoArray} from "../types/typesMain";
 
-export interface IPropsRadioGroup {
+export interface IPropsSelect {
     categoriesArray: TInfoArray[]
+    defaultValue: string
 }
 
 export interface IPropsGameList {
