@@ -12,6 +12,10 @@ export interface IPropsGameList {
     products: TGamesResponse
 }
 
+export interface IPropsError {
+    message: string
+}
+
 export interface IPropsLayout {
     children: JSX.Element | JSX.Element[];
 }
@@ -34,7 +38,6 @@ export interface IPropsCarousel {
 }
 
 export interface IPropsSelectList {
-
     setParams: React.Dispatch<React.SetStateAction<TFetchGamesParams>>
 }
 

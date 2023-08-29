@@ -1,4 +1,4 @@
-import {createApi, fetchBaseQuery, retry} from '@reduxjs/toolkit/dist/query/react';
+import {createApi, fetchBaseQuery, FetchBaseQueryError, retry} from '@reduxjs/toolkit/dist/query/react';
 import {API_KEY, API_URL} from "../../apiConsts";
 import {TGamesResponse, TFetchGameParams, TFetchGamesParams, TNoResults} from "../../types/typesMain";
 import {IGameDetails} from "../../interfaces/interfacesMain";
