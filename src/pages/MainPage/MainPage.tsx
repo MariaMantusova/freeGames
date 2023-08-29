@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import GamesList from "../../components/GamesList/GamesList";
 import LayoutPage from "../../components/LayoutPage/LayoutPage";
 import Preloader from "../../components/Preloader/Preloader";
@@ -10,6 +10,8 @@ function MainPage() {
     const [params, setParams] = useState<TFetchGamesParams>({});
     const {
         data: games,
+        refetch,
+        isError,
         error,
         isLoading,
     } = gameAPI.useFetchGamesQuery(params);
