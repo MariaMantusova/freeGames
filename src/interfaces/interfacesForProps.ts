@@ -1,11 +1,16 @@
 import React from "react";
 import {TFetchGamesParams, TGamesResponse, TInfoArray} from "../types/typesMain";
+import {IGameDetails} from "./interfacesMain";
 
 export interface IPropsSelect {
     categoriesArray: TInfoArray[]
     placeholder: string
     setParams: React.Dispatch<React.SetStateAction<TFetchGamesParams>>
     paramKey: string
+}
+
+export interface IPropsGameDetails {
+    details: IGameDetails
 }
 
 export interface IPropsGameList {

@@ -1,23 +1,46 @@
 import React, {useEffect, useState} from "react";
 import LayoutPage from "../../components/LayoutPage/LayoutPage";
-import GameInfoBlock from "../../components/GameInfoBlock/GameInfoBlock";
 import ButtonBack from "../../components/ButtonBack/ButtonBack";
 import Preloader from "../../components/Preloader/Preloader";
-import GameCarousel from "../../components/GameCarousel/GameCarousel";
-import GameRequirements from "../../components/GameRequirements/GameRequirements";
 import {gameAPI} from "../../store/games/games.api";
 import { useParams } from "react-router-dom";
 import Error from "../../components/Error/Error";
+import GameDetails from "../../components/GameDetails/GameDetails";
 
 function GamePage() {
     const [errorMessage, setErrorMessage] = useState("");
-    const gameID =  useParams().id || '0';
+    const gameID = useParams().id || '0';
+    const cashedDetails = localStorage.getItem(gameID);
+    const cashedGame = cashedDetails ? JSON.parse(cashedDetails) : null;
+    const invalidTime = 5 * 60 * 1000;
+
+    function settingGameInfo() {
+        localStorage.setItem(gameID, JSON.stringify({
+            addingTime: Date.now(),
+            getDetails: details,
+        }))
+    }
+
+    function isCashedGameValid(): boolean {
+        if (cashedGame && (Date.now() - cashedGame.addingTime) <= invalidTime) {
+            return true;
+        }
+
+        localStorage.removeItem(gameID);
+        return false;
+    }
+
     const {
         data: details,
-        error,
         isError,
         isLoading,
-    } = gameAPI.useFetchGameDetailsQuery({ id: gameID! })
+    } = gameAPI.useFetchGameDetailsQuery({ id: gameID! }, {skip: isCashedGameValid()})
+
+    useEffect(() => {
+        if (details) {
+            settingGameInfo();
+        }
+    }, [details, gameID])
 
     useEffect(() => {
         isError ? setErrorMessage("Не удалось найти информацию об игре.") : setErrorMessage("");
@@ -27,16 +50,9 @@ function GamePage() {
         <LayoutPage>
                 <ButtonBack/>
                 {isLoading ? <Preloader/> :
-                    details ?
-                    <>
-                        <GameInfoBlock developer={details.developer} publisher={details.publisher}
-                                       category={details.genre}
-                                       image={details.thumbnail}
-                                       date={details.release_date.split("-").reverse().join(".")}
-                                       title={details.title}/>
-                        <GameCarousel photos={details.screenshots}/>
-                        <GameRequirements requirements={details.minimum_system_requirements}/>
-                    </> :
+                    details || cashedGame.getDetails ?
+                        <GameDetails details={details || cashedGame.getDetails}/>
+                     :
                     isError ?
                         <Error message={errorMessage}/> :
                         <></>}
