@@ -15,7 +15,7 @@ function GameItem(props: IGameProps) {
     return(
         <Card onClick={handleClick}
             hoverable
-            style={{ width: 300, display: "flex", flexDirection: "column", margin: 0}}
+            style={{ maxWidth: "300px", display: "flex", flexDirection: "column", margin: 0}}
             cover={<img alt={props.title} src={props.image} />}
         >
             <Meta title={props.title} description={`Жанр: ${props.category}`} />

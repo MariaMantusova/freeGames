@@ -5,3 +5,28 @@
     width: 100%;
     margin-bottom: 40px;
 }
+
+@media screen and (max-width: 1090px) {
+    .game-info-block {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+.game-info-block__title {
+    align-self: center;
+    margin-bottom: 40px;
+    margin-top: 0;
+    font-size: 25px;
+    color: #aaaaaa;
+}
+
+@media screen and (max-width: 420px) {
+    .game-info-block__title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+}
+

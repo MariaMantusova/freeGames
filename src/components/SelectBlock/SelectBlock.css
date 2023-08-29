@@ -1,4 +1,4 @@
-.radio__block {
+.select__block {
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -7,7 +7,13 @@
     margin: 0 auto;
 }
 
-.radio__title {
+@media screen and (max-width: 450px) {
+    .select__block {
+        flex-direction: column;
+    }
+}
+
+.select__title {
     font-size: 20px;
     margin: 0;
 }

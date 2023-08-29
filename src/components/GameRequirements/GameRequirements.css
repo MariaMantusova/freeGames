@@ -10,4 +10,17 @@
 
 .requirements__title {
     font-size: 25px;
- }
+}
+
+@media screen and (max-width: 510px) {
+    .requirements__title {
+        text-align: center;
+        max-width: 95vw;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .requirements__title {
+        font-size: 22px;
+    }
+}

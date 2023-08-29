@@ -9,9 +9,9 @@ const { Title } = Typography;
 function GameInfoBlock(props: IPropsGameInfoBlock) {
     return(
         <div className="game-info-block">
-            <Image width={600} src={props.image} alt={props.title}/>
+            <Image style={{maxWidth: "600px", width: "100%"}} src={props.image} alt={props.title}/>
             <div className="game-info-block__container">
-                <Title style={{color: "#aaa", alignSelf: "center", marginBottom: "40px", marginTop: "0"}}>{props.title}</Title>
+                <h1 className="game-info-block__title">{props.title}</h1>
                 <GameInfoList date={props.date} category={props.category}
                               publisher={props.publisher} developer={props.developer}/>
             </div>

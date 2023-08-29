@@ -4,8 +4,8 @@ import {IPropsSelectBlock} from "../../interfaces/interfacesForProps";
 
 function SelectBlock(props: IPropsSelectBlock) {
    return (
-       <div className="radio__block">
-           <h2 className="radio__title">{props.title}</h2>
+       <div className="select__block">
+           <h2 className="select__title">{props.title}</h2>
            {props.children}
        </div>
 

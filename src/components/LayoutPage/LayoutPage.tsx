@@ -14,7 +14,7 @@ function LayoutPage(props: IPropsLayout) {
                 backgroundColor: "#272b30"}}>
                 {props.children}
             </Content>
-            <Footer style={{display: "flex", justifyContent: "center", backgroundColor: "#000", color: "#aaa"}}>
+            <Footer style={{display: "flex", justifyContent: "center", backgroundColor: "#000", color: "#aaa", textAlign: "center"}}>
                 &#169; Тестовое задание выполнено Марией Мантусовой.
             </Footer>
         </Layout>
