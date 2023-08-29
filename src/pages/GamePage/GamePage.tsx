@@ -17,7 +17,7 @@ function GamePage() {
     function settingGameInfo() {
         localStorage.setItem(gameID, JSON.stringify({
             addingTime: Date.now(),
-            getDetails: details,
+            gameDetails: details,
         }))
     }
 
@@ -50,8 +50,8 @@ function GamePage() {
         <LayoutPage>
                 <ButtonBack/>
                 {isLoading ? <Preloader/> :
-                    details || cashedGame.getDetails ?
-                        <GameDetails details={details || cashedGame.getDetails}/>
+                    details || cashedGame.gameDetails ?
+                        <GameDetails details={details || cashedGame.gameDetails}/>
                      :
                     isError ?
                         <Error message={errorMessage}/> :

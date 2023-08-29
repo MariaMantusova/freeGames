@@ -1,10 +1,15 @@
-import {createApi, fetchBaseQuery, FetchBaseQueryError, retry} from '@reduxjs/toolkit/dist/query/react';
+import {createApi, fetchBaseQuery, retry} from '@reduxjs/toolkit/dist/query/react';
 import {API_KEY, API_URL} from "../../apiConsts";
 import {TGamesResponse, TFetchGameParams, TFetchGamesParams, TNoResults} from "../../types/typesMain";
 import {IGameDetails} from "../../interfaces/interfacesMain";
 
 const staggeredBaseQuery = retry(fetchBaseQuery({
     baseUrl: API_URL,
+    headers: {
+        'X-RapidAPI-Key': API_KEY,
+        'X-RapidAPI-Host':
+            'free-to-play-games-database.p.rapidapi.com',
+    },
 }), {
     maxRetries: 3,
 })
@@ -17,11 +22,6 @@ export const gameAPI = createApi({
             query: (params: TFetchGamesParams) => ({
                 url: '/games',
                 params: params,
-                headers: {
-                    'X-RapidAPI-Key': API_KEY,
-                    'X-RapidAPI-Host':
-                        'free-to-play-games-database.p.rapidapi.com',
-                },
             }),
             keepUnusedDataFor: 0,
         }),
@@ -29,11 +29,6 @@ export const gameAPI = createApi({
             query: (params: TFetchGameParams) => ({
                 url: '/game',
                 params: params,
-                headers: {
-                    'X-RapidAPI-Key': API_KEY,
-                    'X-RapidAPI-Host':
-                        'free-to-play-games-database.p.rapidapi.com',
-                },
             }),
             keepUnusedDataFor: 60 * 5,
         }),
