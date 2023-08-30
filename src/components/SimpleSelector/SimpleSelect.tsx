@@ -14,6 +14,9 @@ function SimpleSelect (props: IPropsSelect) {
     return (
         <Select
             showSearch
+            filterOption={(input, option) =>
+                (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
+            }
             placeholder={props.placeholder}
             onChange={handleChange}
             style={{width: 300}}

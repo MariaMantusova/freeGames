@@ -17,9 +17,16 @@ function MainPage() {
     } = gameAPI.useFetchGamesQuery(params);
 
     useEffect(() => {
-        isError ? setErrorMessage("Произошла ошибка при загрузке игр. " +
-            "Обновите страницу.") : setErrorMessage("")
+        if (isError) {
+            setErrorMessage("Произошла ошибка при загрузке игр.");
+        }
     }, [isError])
+
+    useEffect(() => {
+        if (!Array.isArray(games)) {
+            setErrorMessage("Не найдено игр по заданным фильтрам");
+        }
+    }, [games])
 
     return (
         <LayoutPage>
@@ -27,9 +34,8 @@ function MainPage() {
             {isLoading ?
                 <Preloader/> : Array.isArray(games) ?
                     <GamesList products={games}/> :
-                    isError ?
-                        <Error message={errorMessage}/> :
-                        <></>}
+                    <Error message={errorMessage}/>
+            }
         </LayoutPage>
     )
 }

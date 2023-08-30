@@ -7,7 +7,7 @@ function GamesList(props: IPropsGameList) {
     return (
         <>
             <List
-                style={{maxWidth: "70vw", width: "100%", margin: "20px auto 40px", gap: "30px"}}
+                style={{maxWidth: "70vw", width: "100%", margin: "20px auto 40px", gap: "30px", minHeight: "70vh"}}
                 pagination={{
                     pageSize: 12,
                     align: "center",
