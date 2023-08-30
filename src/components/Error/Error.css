@@ -1,0 +1,15 @@
+.error {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error__text {
+    max-width: 310px;
+    color: red;
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    width: 100%;
+}
