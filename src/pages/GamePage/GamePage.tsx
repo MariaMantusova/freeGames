@@ -50,7 +50,7 @@ function GamePage() {
         <LayoutPage>
                 <ButtonBack/>
                 {isLoading ? <Preloader/> :
-                    details || cashedGame.gameDetails ?
+                    details || (cashedGame !== null) ?
                         <GameDetails details={details || cashedGame.gameDetails}/>
                      :
                     isError ?
