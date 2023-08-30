@@ -1,10 +1,8 @@
 import React from "react";
 import "./GameInfoBlock.css";
-import {Image, Typography} from 'antd';
+import {Image} from 'antd';
 import GameInfoList from "../GameInfoList/GameInfoList";
 import {IPropsGameInfoBlock} from "../../interfaces/interfacesForProps";
-
-const { Title } = Typography;
 
 function GameInfoBlock(props: IPropsGameInfoBlock) {
     return(
