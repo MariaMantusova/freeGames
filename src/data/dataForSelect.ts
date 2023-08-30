@@ -202,7 +202,7 @@ const category: TInfoArray[] = [
     },
     {
         value: "low-spec",
-        label: ""
+        label: "low-spec"
     },
     {
         value: "tower-defense",
