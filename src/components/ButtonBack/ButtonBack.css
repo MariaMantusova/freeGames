@@ -1,0 +1,12 @@
+.button-back {
+    align-self: flex-start;
+    margin: 30px 0 30px 50px;
+    color: #aaaaaa;
+    transition: opacity 0.5s ease-in-out;
+    text-decoration: none;
+}
+
+.button-back:hover {
+    opacity: 0.5;
+    color: #aaaaaa;
+}

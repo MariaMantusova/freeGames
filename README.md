@@ -1,46 +1,37 @@
-# Getting Started with Create React App
+# Тестовое задание Avito-tech
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ Задание: Разработать интерфейс для сайта [FreeToGame](https://www.freetogame.com/).
 
-## Available Scripts
+## Инструкция запуска
+1. Склонируйте на свой компьютер репозиторий
+   ```git clone https://github.com/MariaMantusova/freeGames.git```;
+2. Зайдите в папку с проектом и ввести в bash команду ```npm install```;
+3. После чего введите команду ```npm start```;
+4. Приложение откроется по адресу ```http://localhost:3001```
 
-In the project directory, you can run:
+## Технические требования
+* С приложением должно быть удобно работать, как с мобильного экрана, так и с десктопа (адаптивный интерфейс)
+* Приложение разработано с помощью React 18+ и Redux / Redux Toolkit
+* Использован [Free-To-Play Games API](https://www.freetogame.com/api-doc) (не важно с или без CORS). Вызовы API и обработка данных от него производятся 
+  напрямую с фронтенда (кроме случая, если вы сделаете опциональное задание про Node.JS).
+* Роутинг выполнен с использованием React Router v6
+* Фреймворк UI любой на ваше усмотрение (например, Ant Design, Semantic UI, Element UI)
+* Пакетный менеджер npm
+* Приложение должно запускаться по адресу localhost:3001 командой npm start
+* При переходах по ссылкам страница не перезагружается
+* Если карточка игры была открыта, то она должна быть доступна при последующих открытиях (перезагрузках) страницы без
+  дополнительного запроса в течение 5 минут
+* Исходный код решения должен быть выложен с вашего аккаунта на Github
 
-### `npm start`
+## Выполненные опциональные требования
+* Использование TypeScript
+* Учитывать, что список игр может содержать тысячи тайтлов
+* При неудачном запросе должно быть три попытки повторного запроса
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Стек
+* React 18
+* Redux Toolkit
+* React Router v6
+* Ant Design (UI фреймворк)
+* TypeScript
+* CSS
